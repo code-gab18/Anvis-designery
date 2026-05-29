@@ -202,3 +202,69 @@ function resetAuto() {
 
 autoSlide();
 
+  
+/* ═══════════════════════════════════════════════════
+   CONTACT FORM
+═══════════════════════════════════════════════════ */
+
+const form = document.getElementById("contactForm");
+const successModal = document.getElementById("successModal");
+const closeSuccess = document.getElementById("closeSuccess");
+
+form.addEventListener("submit", async function(e) {
+
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  try {
+
+    const response = await fetch(
+      "https://formspree.io/f/mykvvkrn",
+      {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      }
+    );
+
+    if (response.ok) {
+
+      successModal.classList.add("active");
+
+      form.reset();
+
+    } else {
+
+      alert("Something went wrong. Please try again.");
+
+    }
+
+  } catch (error) {
+
+    alert("Network error. Please try again.");
+
+  }
+
+});
+
+/* CLOSE MODAL */
+
+closeSuccess.addEventListener("click", () => {
+  successModal.classList.remove("active");
+});
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
+successModal.addEventListener("click", (e) => {
+
+  if (e.target === successModal || e.target.classList.contains("success-backdrop")) {
+
+    successModal.classList.remove("active");
+
+  }
+
+});
+

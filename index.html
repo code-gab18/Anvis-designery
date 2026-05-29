@@ -269,38 +269,189 @@
 
 </section>
  
- 
 <!-- ═══════════════════════════════════════════
      CONTACT
 ═══════════════════════════════════════════ -->
-<div class="section-rule"></div>
 <section id="contact">
-  <div>
-    <span class="eyebrow rv">Get In Touch</span>
-    <h2 class="contact-heading rv d1">
-      <span class="lmask"><span class="linner">LET'S</span></span>
-      <span class="lmask"><span class="linner d1 cyan">BUILD</span></span>
-      <span class="lmask"><span class="linner d2">TOGETHER</span></span>
+
+  <!-- LEFT SIDE -->
+  <div class="contact-left rv">
+
+    <span class="eyebrow">Get In Touch</span>
+
+    <h2 class="contact-heading">
+      LET'S <span class="cyan">BUILD</span><br>
+      TOGETHER
     </h2>
-    <p class="contact-sub rv d2">Have a project in mind? We would love to hear about it. Let's start a conversation about what we can create together.</p>
-    <div class="c-list rv d3">
-      <div class="c-item"><span class="c-lbl">Email</span><span class="c-val">anvisdesignery@gmail.com</span></div>
-      <div class="c-item"><span class="c-lbl">Phone</span><span class="c-val">+63 975 067 7056</span></div>
-      <div class="c-item"><span class="c-lbl">Studio</span><span class="c-val">Apalit, Pampanga<br>Philippines</span></div>
-      <div class="c-item"><span class="c-lbl">Follow</span><span class="c-val">Facebook · Instagram · LinkedIn</span></div>
+
+    <p class="contact-sub">
+      Have a project in mind? We would love to hear about it.
+      Let’s start a conversation about what we can create together.
+    </p>
+
+    <div class="c-list">
+
+      <div class="c-item">
+        <div class="c-lbl">Email</div>
+        <div class="c-val">
+          anvisdesignery@gmail.com
+        </div>
+      </div>
+
+      <div class="c-item">
+        <div class="c-lbl">Phone</div>
+        <div class="c-val">
+          +63 975 067 7056
+        </div>
+      </div>
+
+      <div class="c-item">
+        <div class="c-lbl">Studio</div>
+        <div class="c-val">
+          Apalit, Pampanga<br>
+          Philippines
+        </div>
+      </div>
+
+      <div class="c-item">
+        <div class="c-lbl">Follow</div>
+        <div class="c-val">
+          <a href="https://www.facebook.com/anvis.designery" target="_blank">
+            Facebook
+          </a> ·
+
+          <a href="https://www.instagram.com/anvisdesignery" target="_blank">
+            Instagram
+          </a> ·
+
+          <a href="#">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
     </div>
+
   </div>
+
+  <!-- RIGHT SIDE -->
   <div class="rv d2">
-    <div class="cform">
-      <div class="ff"><label>Full Name</label><input type="text" placeholder=""></div>
-      <div class="ff"><label>Email Address</label><input type="email" placeholder=""></div>
-      <div class="ff"><label>Project Type</label><input type="text" placeholder=""></div>
-      <div class="ff"><label>Your Message</label><textarea placeholder="Describe your vision…"></textarea></div>
-      <button class="fsub" onclick="this.textContent='Message Sent';this.style.background='#1a7faa'">Send Message</button>
-    </div>
+
+    <form 
+      class="cform"
+      id="contactForm"
+    >
+
+      <!-- FULL NAME -->
+      <div class="ff">
+        <label>Full Name</label>
+
+        <input
+          type="text"
+          name="fullName"
+          placeholder="Enter your full name"
+          required
+        >
+      </div>
+
+      <!-- EMAIL -->
+      <div class="ff">
+        <label>Email Address</label>
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email address"
+          required
+        >
+      </div>
+
+      <!-- PROJECT TYPE -->
+      <div class="ff">
+        <label>Project Type</label>
+
+        <input
+          type="text"
+          name="projectType"
+          placeholder="Architecture, Interior Design, etc."
+        >
+      </div>
+
+      <!-- MESSAGE -->
+      <div class="ff">
+        <label>Your Message</label>
+
+        <textarea
+          name="message"
+          placeholder="Describe your vision..."
+          required
+        ></textarea>
+      </div>
+
+      <!-- BUTTON -->
+      <button type="submit" class="fsub">
+        Send Message
+      </button>
+
+    </form>
+
   </div>
+
 </section>
 
+<!-- ═══════════════════════════════════════════
+     PREMIUM SUCCESS MODAL
+═══════════════════════════════════════════ -->
+<div class="success-modal" id="successModal">
+
+  <!-- BACKDROP -->
+  <div class="success-backdrop"></div>
+
+  <!-- MODAL -->
+  <div class="success-box">
+
+    <!-- TOP GLOW LINE -->
+    <div class="success-line"></div>
+
+    <!-- ICON -->
+    <div class="success-icon-wrap">
+
+      <div class="success-ring"></div>
+
+      <div class="success-check">
+        ✓
+      </div>
+
+    </div>
+
+    <!-- MINI LABEL -->
+    <span class="success-mini">
+      MESSAGE SENT
+    </span>
+
+    <!-- TITLE -->
+    <h3>
+      Your vision is now<br>
+      in our hands.
+    </h3>
+
+    <!-- DESCRIPTION -->
+    <p>
+      Thank you for reaching out to ANVIS Designery.
+      Our team will contact you shortly.
+    </p>
+
+    <!-- BUTTON -->
+    <button 
+      id="closeSuccess"
+      class="success-btn"
+    >
+      Continue Exploring
+    </button>
+
+  </div>
+
+</div>
 
 <!-- ═══════════════════════════════════════════
      FOOTER
