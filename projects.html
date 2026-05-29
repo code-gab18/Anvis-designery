@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANVIS Designery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── loader image panels (base64 embedded) ── */
+    #lc0 { background-image: url('data:image/png;base64,${IMG1}'); }
+    #lc1 { background-image: url('data:image/png;base64,${IMG2}'); }
+    #lc2 { background-image: url('data:image/png;base64,${IMG3}'); }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAV
+═══════════════════════════════════════════ -->
+<nav id="nav">
+  <a class="nav-logo" href="index.html"><span class="cyan">AN</span>VIS</a>
+  <a class="nav-menu-btn" href="index.html">Back</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════
+     PROJECTS
+═══════════════════════════════════════════ -->
+<div class="section-rule"></div>
+<section id="projects">
+  <div class="proj-header rv">
+    <div class="proj-header-left">
+      <span class="eyebrow">Selected Work</span>
+      <div class="proj-h-title">Projects</div>
+    </div>
+    <div class="proj-h-count">06</div>
+  </div>
+ 
+  <ul class="proj-list">
+    <li class="proj-row rv" data-proj="0"
+        onmouseenter="showPreview(event,0)" onmouseleave="hidePreview()" onmousemove="movePreview(event)">
+      <span class="proj-row-num"></span>
+      <span class="proj-row-name">The Meridian House</span>
+      <span class="proj-row-cat">Residential</span>
+      <span class="proj-row-yr">2024</span>
+    </li>
+    <li class="proj-row rv d1" data-proj="1"
+        onmouseenter="showPreview(event,1)" onmouseleave="hidePreview()" onmousemove="movePreview(event)">
+      <span class="proj-row-num"></span>
+      <span class="proj-row-name">Vantage Office Tower</span>
+      <span class="proj-row-cat">Commercial</span>
+      <span class="proj-row-yr">2024</span>
+    </li>
+    <li class="proj-row rv d2" data-proj="2"
+        onmouseenter="showPreview(event,2)" onmouseleave="hidePreview()" onmousemove="movePreview(event)">
+      <span class="proj-row-num"></span>
+      <span class="proj-row-name">Solace Residences</span>
+      <span class="proj-row-cat">Interior Design</span>
+      <span class="proj-row-yr">2023</span>
+    </li>
+    <li class="proj-row rv d1" data-proj="3"
+        onmouseenter="showPreview(event,3)" onmouseleave="hidePreview()" onmousemove="movePreview(event)">
+      <span class="proj-row-num"></span>
+      <span class="proj-row-name">Altitude Complex</span>
+      <span class="proj-row-cat">Mixed-Use</span>
+      <span class="proj-row-yr">2023</span>
+    </li>
+    <li class="proj-row rv d2" data-proj="4"
+        onmouseenter="showPreview(event,4)" onmouseleave="hidePreview()" onmousemove="movePreview(event)">
+      <span class="proj-row-num"></span>
+      <span class="proj-row-name">Pavilion Heritage</span>
+      <span class="proj-row-cat">Cultural</span>
+      <span class="proj-row-yr">2022</span>
+    </li>
+    <li class="proj-row rv d3" data-proj="5"
+        onmouseenter="showPreview(event,5)" onmouseleave="hidePreview()" onmousemove="movePreview(event)">
+      <span class="proj-row-num"></span>
+      <span class="proj-row-name">Greenfield Estate</span>
+      <span class="proj-row-cat">Landscape</span>
+      <span class="proj-row-yr">2022</span>
+    </li>
+  </ul>
+</section>
+ 
+<!-- floating project preview -->
+<div class="proj-preview" id="projPreview">
+  <div class="proj-preview-inner" id="projPreviewInner"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

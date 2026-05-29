@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANVIS Designery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── loader image panels (base64 embedded) ── */
+    #lc0 { background-image: url('data:image/png;base64,${IMG1}'); }
+    #lc1 { background-image: url('data:image/png;base64,${IMG2}'); }
+    #lc2 { background-image: url('data:image/png;base64,${IMG3}'); }
+  </style>
+</head>
+<body>
+<!-- ═══════════════════════════════════════════
+     LOADER
+═══════════════════════════════════════════ -->
+
+ <div id="loader">
+
+  <!-- Video Background -->
+  <video class="loader-video" autoplay muted loop playsinline>
+    <source src="video/ANVIS_loader_v2.mp4" type="video/mp4">
+  </video>
+  <!-- Counter -->
+  <div class="l-num" id="lNum">0</div>
+
+  <!-- Progress -->
+  <div class="l-bar">
+    <div class="l-bar-fill" id="lFill"></div>
+  </div>
+
+</div>
+ 
+<!-- ═══════════════════════════════════════════
+     MENU OVERLAY
+═══════════════════════════════════════════ -->
+<div id="menu-overlay">
+  <div class="menu-nav">
+    <a class="menu-link" href="#" onclick="navTo('hero')">Home</a>
+    <a class="menu-link" href="#" onclick="navTo('intro')">Studio</a>
+    <a class="menu-link" href="projects.html" onclick="navTo('projects')">Projects</a>
+    <a class="menu-link" href="#" onclick="navTo('about')">About</a>
+    <a class="menu-link" href="#" onclick="navTo('contact')">Contact</a>
+  </div>
+  <div class="menu-footer">
+    <div class="menu-contact-links">
+      <a href="https://www.facebook.com/anvis.designery">Facebook</a>
+      <a href="https://www.instagram.com/anvisdesignery?fbclid=IwY2xjawSBGEJleHRuA2FlbQIxMABicmlkETF0dHEyeGU5Q2U5RVFFZFpLc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHqDttA9rIbQGjocQ8rBThAMWBiLgCibm59IzZhGubmpV4p6dG8nM2mbgEaRJ_aem_KgnpEXYdT2mRxeAcnnmfCA">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <div class="menu-copy">© 2024 ANVIS Designery</div>
+  </div>
+</div>
+ 
+ 
+<!-- ═══════════════════════════════════════════
+     NAV
+═══════════════════════════════════════════ -->
+<nav id="nav">
+  <a class="nav-logo" href="#"><span class="cyan">AN</span>VIS</a>
+  <button class="nav-menu-btn" id="menuBtn" onclick="toggleMenu()">menu</button>
+</nav>
+ 
+ 
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section id="hero">
+
+  <!-- IMAGE BACKGROUND -->
+  <div class="hero-bg">
+    <img src="image/540672689_122174374250566135_6250837601490793238_n.jpg" alt="Background" class="hero-image">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-bottom">
+
+    <div class="hero-title-col">
+      <span class="hero-mask">
+        <span class="hero-word" id="hw0">ANVIS</span>
+      </span>
+
+      <span class="hero-mask">
+        <span class="hero-word cyan delay1" id="hw1">
+          DESIGNERY
+        </span>
+      </span>
+    </div>
+
+  </div>
+
+</section>
+ 
+ 
+<!-- ═══════════════════════════════════════════
+     INTRO / STUDIO
+═══════════════════════════════════════════ -->
+<div class="section-rule"></div>
+
+<section id="intro">
+
+  <!-- BACKGROUND DECOR -->
+  <div class="intro-grid"></div>
+  <div class="intro-glow glow-1"></div>
+  <div class="intro-glow glow-2"></div>
+
+  <!-- LEFT CONTENT -->
+  <div class="intro-left">
+
+    <span class="eyebrow rv">OUR PHILOSOPHY</span>
+
+    <h2 class="big-heading rv d1">
+      <span>DESIGN</span>
+      <span>THAT</span>
+      <span class="cyan">ENDURES</span>
+    </h2>
+
+    <p class="body-text rv d2">
+      At ANVIS Designery, we create spaces that blend architecture,
+      emotion, and precision. Every structure is crafted to feel timeless,
+      immersive, and deeply connected to human experience.
+    </p>
+
+    <div class="intro-buttons rv d3">
+      <a href="projects.html" class="btn-primary">Explore Projects</a>
+      <a href="#" class="btn-secondary">Our Process</a>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row rv d4">
+
+      <div class="stat-card">
+        <div class="stat-num">150+</div>
+        <div class="stat-label">PROJECTS</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-num">12</div>
+        <div class="stat-label">YEARS</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-num">40+</div>
+        <div class="stat-label">AWARDS</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-num">98%</div>
+        <div class="stat-label">SATISFACTION</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT VISUAL -->
+  <div class="intro-right rv d2">
+
+    <div class="image-orb orb-1"></div>
+    <div class="image-orb orb-2"></div>
+
+    <div class="floating-stage">
+
+      <!-- MAIN IMAGE -->
+      <div class="floating-image-wrap">
+
+        <div class="image-back-glow"></div>
+
+        <img
+          src="c:\Users\GAB\Desktop\470813979_122126911118566135_3029144698773289959_n-removebg-preview.png"
+          alt="ANVIS Designery"
+          class="floating-image"
+        >
+
+      </div>
+
+      <!-- FLOATING GLASS CARD -->
+      <div class="glass-card card-1">
+        <span>Luxury</span>
+      </div>
+
+      <div class="glass-card card-2">
+        <span>Minimal</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+ 
+<!-- ═══════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════ -->
+<div class="section-rule"></div>
+
+<section id="about">
+
+  <!-- LEFT IMAGE SLIDER -->
+  <div class="about-img-stack rv">
+
+    <div class="about-slider">
+
+      <div class="slider">
+        <div class="slides">
+
+          <div class="slide active">
+            <img src="image/470808370_122126911130566135_6668128968895604669_n.jpg" alt="Slide 1">
+          </div>
+
+          <div class="slide">
+            <img src="image/471129801_122126911136566135_3234299509571088622_n.jpg" alt="Slide 2">
+          </div>
+
+          <div class="slide">
+            <img src="image/471155206_122126910830566135_2582893694814959469_n.jpg" alt="Slide 3">
+          </div>
+
+        </div>
+
+        <!-- DOTS (ONLY ONE SYSTEM) -->
+        <div class="dots"></div>
+
+      </div>
+
+      <!-- OVERLAYS INSIDE SLIDER -->
+      <div class="about-glow"></div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="about-content rv">
+
+    <span class="eyebrow">About Us</span>
+
+    <h2 class="big-heading d1">
+      <span class="lmask"><span class="linner">BRAND</span></span>
+      <span class="lmask">
+        <span class="linner d1"><span class="cyan">IDENTITY</span></span>
+      </span>
+    </h2>
+
+    <p class="body-text d2">
+      𝗔𝗡/𝗩𝗜𝗦 was derived from the latin words 𝙖𝙣𝙞𝙢𝙖𝙙𝙫𝙚𝙧𝙩𝙤 and 𝙫𝙞𝙨𝙞𝙤 meaning 𝙩𝙤 𝙧𝙚𝙖𝙡𝙞𝙯𝙚 𝙫𝙞𝙨𝙞𝙤𝙣𝙨 which is the heart principle of the brand, helping people to translate their creative ideas into sensible visions.
+    </p>
+
+    <p class="body-text d2">
+      Giving birth to 𝗔𝗡𝗩𝗜𝗦, A designery who's committed to getting the art and science of Architectural Design accessible to the people by realizing their greatest vision and definition of a dream space.
+    </p>
+
+    <div class="about-services d3">
+      <span class="svc">Architecture</span>
+      <span class="svc">Interior Design</span>
+      <span class="svc">Master Planning</span>
+      <span class="svc">3D Visualization</span>
+      <span class="svc">Landscape Design</span>
+      <span class="svc">BIM Modeling</span>
+      <span class="svc">Construction Drawings</span>
+    </div>
+
+  </div>
+
+</section>
+ 
+ 
+<!-- ═══════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════ -->
+<div class="section-rule"></div>
+<section id="contact">
+  <div>
+    <span class="eyebrow rv">Get In Touch</span>
+    <h2 class="contact-heading rv d1">
+      <span class="lmask"><span class="linner">LET'S</span></span>
+      <span class="lmask"><span class="linner d1 cyan">BUILD</span></span>
+      <span class="lmask"><span class="linner d2">TOGETHER</span></span>
+    </h2>
+    <p class="contact-sub rv d2">Have a project in mind? We would love to hear about it. Let's start a conversation about what we can create together.</p>
+    <div class="c-list rv d3">
+      <div class="c-item"><span class="c-lbl">Email</span><span class="c-val">anvisdesignery@gmail.com</span></div>
+      <div class="c-item"><span class="c-lbl">Phone</span><span class="c-val">+63 975 067 7056</span></div>
+      <div class="c-item"><span class="c-lbl">Studio</span><span class="c-val">Apalit, Pampanga<br>Philippines</span></div>
+      <div class="c-item"><span class="c-lbl">Follow</span><span class="c-val">Facebook · Instagram · LinkedIn</span></div>
+    </div>
+  </div>
+  <div class="rv d2">
+    <div class="cform">
+      <div class="ff"><label>Full Name</label><input type="text" placeholder=""></div>
+      <div class="ff"><label>Email Address</label><input type="email" placeholder=""></div>
+      <div class="ff"><label>Project Type</label><input type="text" placeholder=""></div>
+      <div class="ff"><label>Your Message</label><textarea placeholder="Describe your vision…"></textarea></div>
+      <button class="fsub" onclick="this.textContent='Message Sent';this.style.background='#1a7faa'">Send Message</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-logo"><span class="cyan">AN</span>VIS Designery</div>
+  <div class="footer-copy">© 2024 ANVIS Designery · All rights reserved</div>
+  <div class="footer-links">
+    <a href="https://www.facebook.com/anvis.designery">Facebook</a>
+    <a href="https://www.instagram.com/anvisdesignery?fbclid=IwY2xjawSBGEJleHRuA2FlbQIxMABicmlkETF0dHEyeGU5Q2U5RVFFZFpLc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHqDttA9rIbQGjocQ8rBThAMWBiLgCibm59IzZhGubmpV4p6dG8nM2mbgEaRJ_aem_KgnpEXYdT2mRxeAcnnmfCA">Instagram</a>
+    <a href="#">LinkedIn</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
