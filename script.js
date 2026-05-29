@@ -202,6 +202,7 @@ function resetAuto() {
 
 autoSlide();
 
+<<<<<<< Updated upstream
   
 /* ═══════════════════════════════════════════════════
    CONTACT FORM
@@ -268,3 +269,21 @@ successModal.addEventListener("click", (e) => {
 
 });
 
+=======
+
+function toggleProject(row){
+
+  const item = row.parentElement;
+
+  document.querySelectorAll('.proj-item').forEach(el => {
+
+    if(el !== item){
+      el.classList.remove('active');
+    }
+
+  });
+
+  item.classList.toggle('active');
+
+}
+>>>>>>> Stashed changes
