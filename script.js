@@ -282,3 +282,33 @@ function toggleProject(row) {
 
   item.classList.toggle('active');
 }
+
+function slideProject(event, btn, direction) {
+
+  event.stopPropagation();
+
+  const sliderWrap = btn.closest('.proj-slider-wrap');
+  const slides = sliderWrap.querySelectorAll('.proj-slide');
+
+  let activeIndex = 0;
+
+  slides.forEach((slide, index) => {
+    if (slide.classList.contains('active')) {
+      activeIndex = index;
+    }
+  });
+
+  slides[activeIndex].classList.remove('active');
+
+  activeIndex += direction;
+
+  if (activeIndex >= slides.length) {
+    activeIndex = 0;
+  }
+
+  if (activeIndex < 0) {
+    activeIndex = slides.length - 1;
+  }
+
+  slides[activeIndex].classList.add('active');
+}
