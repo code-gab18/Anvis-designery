@@ -1851,4 +1851,353 @@ footer {
   background: white;
 }
 
- 
+/* ═══════════════════════════════════════════════════
+   MOBILE & TABLET FIXES  — paste at the bottom of your CSS
+   Breakpoints: 1024px (tablet), 768px (phone/small tablet)
+═══════════════════════════════════════════════════ */
+
+/* ── LOADER ─────────────────────────────────────────
+   Fix: video covers the screen properly on all devices,
+   counter stays centered and readable
+──────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .loader-video {
+    object-fit: cover;
+    object-position: center center;
+  }
+  .l-num {
+    font-size: 32px;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .loader-video {
+    object-position: center top;
+  }
+  .l-num {
+    font-size: 22px;
+    letter-spacing: -2px;
+  }
+}
+
+
+/* ── NAV ─────────────────────────────────────────────
+   Fix: less padding so logo + menu button don't crowd
+──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  #nav {
+    padding: 22px 24px;
+  }
+  #nav.compact {
+    padding: 16px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  #nav {
+    padding: 18px 16px;
+  }
+}
+
+
+/* ── HERO ─────────────────────────────────────────────
+   Fix: text size + padding on small screens
+──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  #hero {
+    padding: 0 24px 48px;
+  }
+  .hero-word {
+    font-size: clamp(56px, 15vw, 100px);
+  }
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero {
+    padding: 0 16px 36px;
+  }
+  .hero-word {
+    font-size: clamp(44px, 16vw, 72px);
+  }
+}
+
+
+/* ── INTRO ───────────────────────────────────────────
+   Fix: 2-column grid stacks to 1 column,
+   video card moves above the text
+──────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  /* already in your CSS — just reinforcing */
+  #intro {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: clamp(80px, 8vw, 140px) 32px;
+  }
+  .intro-right {
+    order: -1;
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #intro {
+    padding: 80px 24px;
+    gap: 40px;
+  }
+  .big-heading {
+    font-size: clamp(60px, 14vw, 110px);
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .video-showcase {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #intro {
+    padding: 64px 16px;
+  }
+  .big-heading {
+    font-size: clamp(48px, 15vw, 80px);
+    letter-spacing: -3px;
+  }
+  .intro-buttons {
+    flex-direction: column;
+  }
+  .btn-primary {
+    text-align: center;
+  }
+}
+
+
+/* ── PROJECTS — DROPDOWN ────────────────────────────
+   Fix: the dropdown switches from 2-col to 1-col,
+   slider and buttons scale to fit the screen
+──────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .proj-header {
+    padding: 60px 32px 36px;
+  }
+  .proj-row {
+    padding: 0 32px;
+  }
+  .proj-dropdown {
+    padding: 0 32px;
+    grid-template-columns: 1fr;        /* stack desc above slider */
+    gap: 24px;
+  }
+  .proj-item.active .proj-dropdown {
+    padding: 32px 32px 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .proj-header {
+    padding: 48px 24px 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .proj-row {
+    padding: 0 24px;
+    grid-template-columns: 40px 1fr auto; /* hide year */
+    gap: 14px;
+    min-height: 68px;
+  }
+  .proj-row-yr {
+    display: none;
+  }
+  .proj-row-name {
+    font-size: clamp(16px, 4vw, 26px);
+  }
+  .proj-dropdown {
+    padding: 0 24px;
+  }
+  .proj-item.active .proj-dropdown {
+    padding: 24px 24px 36px;
+  }
+  .proj-slider {
+    border-radius: 16px;
+  }
+  .proj-slide-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proj-header {
+    padding: 36px 16px 20px;
+  }
+  .proj-row {
+    padding: 0 16px;
+    grid-template-columns: 32px 1fr; /* drop category column too */
+    min-height: 60px;
+  }
+  .proj-row-cat {
+    display: none;
+  }
+  .proj-row-name {
+    font-size: clamp(14px, 4.5vw, 20px);
+    letter-spacing: 2px;
+  }
+  .proj-dropdown {
+    padding: 0 16px;
+  }
+  .proj-item.active .proj-dropdown {
+    padding: 20px 16px 28px;
+  }
+  .proj-dropdown-desc {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+  .proj-slide-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+  .proj-slide-btn.prev { left: 10px; }
+  .proj-slide-btn.next { right: 10px; }
+}
+
+
+/* ── ABOUT ───────────────────────────────────────────
+   Fix: 2-col stacks to 1-col, image height scales down
+──────────────────────────────────────────────────── */
+@media (max-width: 980px) {
+  /* your existing breakpoint — reinforcing */
+  #about {
+    grid-template-columns: 1fr;
+    gap: 44px;
+    padding: 80px 24px;
+  }
+  .about-img-stack {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  #about {
+    padding: 64px 24px;
+  }
+  .about-img-stack {
+    height: 320px;
+  }
+  .big-headings {
+    font-size: clamp(54px, 10vw, 100px);
+    letter-spacing: -3px;
+  }
+}
+
+@media (max-width: 480px) {
+  #about {
+    padding: 56px 16px;
+  }
+  .about-img-stack {
+    height: 260px;
+  }
+  .big-headings {
+    font-size: clamp(42px, 13vw, 72px);
+    letter-spacing: -2px;
+  }
+  .about-services {
+    gap: 6px;
+  }
+  .svc {
+    font-size: 8px;
+    padding: 6px 10px;
+  }
+}
+
+
+/* ── CONTACT ─────────────────────────────────────────
+   Fix: 2-col stacks, form goes full width
+──────────────────────────────────────────────────── */
+@media (max-width: 980px) {
+  /* your existing breakpoint — reinforcing */
+  #contact {
+    grid-template-columns: 1fr;
+    gap: 52px;
+    padding: 80px 24px;
+  }
+  .cform {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 64px 24px;
+  }
+  .contact-heading {
+    font-size: clamp(44px, 9vw, 72px);
+  }
+}
+
+@media (max-width: 480px) {
+  #contact {
+    padding: 56px 16px;
+  }
+  .contact-heading {
+    font-size: clamp(36px, 11vw, 56px);
+  }
+  .c-item {
+    grid-template-columns: 56px 1fr;
+    gap: 10px;
+  }
+  .fsub {
+    width: 100%;
+    text-align: center;
+    padding: 14px 24px;
+  }
+}
+
+
+/* ── FOOTER ──────────────────────────────────────────
+   Fix: items wrap and stack on small screens
+──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  footer {
+    padding: 28px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .footer-links {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 24px 16px;
+  }
+}
+
+
+/* ── SAFE AREA (iPhone notch / Dynamic Island) ───────
+   Prevents content hiding behind the home bar
+──────────────────────────────────────────────────── */
+@supports (padding: env(safe-area-inset-bottom)) {
+  #hero     { padding-bottom: max(36px, env(safe-area-inset-bottom)); }
+  footer    { padding-bottom: max(20px, env(safe-area-inset-bottom)); }
+  #menu-overlay { padding-bottom: max(40px, env(safe-area-inset-bottom)); }
+} 
