@@ -115,10 +115,6 @@ window.addEventListener('scroll', () => {
 
 /* ─── LOADER SEQUENCE ─── */
 (function () {
-  // Hide everything except loader immediately
-  document.querySelectorAll('body > *:not(#loader)')
-    .forEach(el => el.style.visibility = 'hidden');
-
   const lNum = document.getElementById('lNum');
   const lFill = document.getElementById('lFill');
   const loader = document.getElementById('loader');
@@ -150,18 +146,17 @@ window.addEventListener('scroll', () => {
     setTimeout(() => {
       loader.style.display = 'none';
 
-      // Reveal everything after loader is gone
-      document.querySelectorAll('body > *:not(#loader)')
-        .forEach(el => el.style.visibility = 'visible');
-
       ['hw0', 'hw1', 'hw2'].forEach((id, i) => {
-        const el = document.getElementById(id);
-        if (el) setTimeout(() => el.classList.add('up'), i * 90);
+        setTimeout(() =>
+          document.getElementById(id).classList.add('up'),
+          i * 90
+        );
       });
 
-      const heroRight = document.getElementById('heroRight');
-      if (heroRight) setTimeout(() => heroRight.classList.add('show'), 600);
-
+      setTimeout(() =>
+        document.getElementById('heroRight').classList.add('show'),
+        600
+      );
     }, 1100);
   }
 })();

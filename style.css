@@ -157,7 +157,7 @@ button { font-family:var(--F); cursor:pointer; background:none; border:none; col
   transition: transform 0.9s var(--inout);
   display: flex; flex-direction: column;
   padding: 120px 48px 60px;
-  z-index: 9998;
+  
 }
 #menu-overlay.open { transform: translateY(0); }
  
@@ -484,7 +484,8 @@ button { font-family:var(--F); cursor:pointer; background:none; border:none; col
     inset:0;
     border-radius:32px;
     padding:2px;
-    animation: border 6s linear infinite;
+    animation:
+    borderGlow 6s linear infinite;
 
     z-index:5;
 }
@@ -1952,21 +1953,9 @@ footer {
     padding: clamp(80px, 8vw, 140px) 32px;
   }
   .intro-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .video-showcase {
-    width: 100%;
-    max-width: 640px;
-    margin: 0 auto;
-  }
-  .stats-grid {
-    max-width: 640px;
-    margin: 20px auto 0;
-    width: 100%;
+    order: -1;
+    max-width: 100%;
+    margin-left: 0;
   }
 }
 
