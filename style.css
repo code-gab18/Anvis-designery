@@ -43,7 +43,7 @@ button { font-family:var(--F); cursor:pointer; background:none; border:none; col
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: var(--black);
+  background: #000;          
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,17 +59,22 @@ button { font-family:var(--F); cursor:pointer; background:none; border:none; col
 /* VIDEO BACKGROUND */
 .loader-video {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   z-index: 1;
 }
 
 /* The big counter */
 .l-num {
-  padding: 320px 0px 0px 0px;
+  margin-top: 170px;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: var(--F);
   font-weight: 700;
   font-size: 40px;
@@ -80,6 +85,8 @@ button { font-family:var(--F); cursor:pointer; background:none; border:none; col
   pointer-events: none;
   transition: opacity .4s;
   text-align: center;
+  width: 100%;
+  padding: 0;
 }
 
 .l-num.hide {
@@ -1860,30 +1867,29 @@ footer {
    Fix: video covers the screen properly on all devices,
    counter stays centered and readable
 ──────────────────────────────────────────────────── */
-@media (max-width: 1024px) {
+@media (max-width: 1024px){
   .loader-video {
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     object-position: center center;
   }
-  .l-num {
-    font-size: 32px;
-    padding: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    text-align: center;
-    width: 100%;
+
+}
+@media (max-width: 480px) {
+  .loader-video {
+    object-fit: contain;
   }
 }
-
-@media (max-width: 768px) {
-  .loader-video {
-    object-position: center top;
+@media (max-width: 1024px) {
+  #loader {
+    background: #f2f2f2;
   }
-  .l-num {
-    font-size: 22px;
-    letter-spacing: -2px;
+  .loader-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
   }
 }
 
